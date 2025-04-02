@@ -54,5 +54,32 @@
 // let addtwonumberswitharrowfunction = (x,y) => console.log(x+y);
 // addtwonumberswitharrowfunction(5,4)
 
-const arr = ["squirrel","alpaca","nuddy"];
-arr.forEach(e=> console.log(e));
+// const arr = ["squirrel","alpaca","nuddy"];
+// arr.forEach(e=> console.log(e));
+
+// let spread = ["so","much","fun"];
+// let message = ["Javascript","is",...spread,"and","Very","powerful"];
+// console.log(message);
+
+// function addtwonumbersUsingSpread(x,y){
+//     console.log(x+y);
+// }
+// let arr =[4,5];
+// addtwonumbersUsingSpread(...arr);
+
+// function addFourNumber(x,y,z,w){
+//     console.log(x+y+z+w);
+// };
+// let arr = [5,9];
+// let arr2 = [6,7];
+// addFourNumber(...arr,...arr2);
+
+function someFunction(p1,p2){
+    console.log(p1,p2);
+}
+someFunction("Hi", "There ","How are you ");
+
+function someFunctionUsingRest(p1,...p2){
+    console.log(p1,p2);
+}
+someFunctionUsingRest("Hi", "There ","How are you ");
