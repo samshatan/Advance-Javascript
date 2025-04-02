@@ -48,5 +48,8 @@
 
 // x => console.log(x);
 
-let doingArrowStuff = x => console.log(x);
-doingArrowStuff("Greet ");
+// let doingArrowStuff = x => console.log(x);
+// doingArrowStuff("Greet ");
+
+let addtwonumberswitharrowfunction = (x,y) => console.log(x+y);
+addtwonumberswitharrowfunction(5,4)
