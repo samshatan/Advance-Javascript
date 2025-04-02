@@ -51,5 +51,8 @@
 // let doingArrowStuff = x => console.log(x);
 // doingArrowStuff("Greet ");
 
-let addtwonumberswitharrowfunction = (x,y) => console.log(x+y);
-addtwonumberswitharrowfunction(5,4)
+// let addtwonumberswitharrowfunction = (x,y) => console.log(x+y);
+// addtwonumberswitharrowfunction(5,4)
+
+const arr = ["squirrel","alpaca","nuddy"];
+arr.forEach(e=> console.log(e));
