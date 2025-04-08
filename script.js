@@ -61,6 +61,8 @@
 // let message = ["Javascript","is",...spread,"and","Very","powerful"];
 // console.log(message);
 
+// spread function position is function calling
+
 // function addtwonumbersUsingSpread(x,y){
 //     console.log(x+y);
 // }
@@ -74,12 +76,34 @@
 // let arr2 = [6,7];
 // addFourNumber(...arr,...arr2);
 
-function someFunction(p1,p2){
-    console.log(p1,p2);
-}
-someFunction("Hi", "There ","How are you ");
+// rest operator  usinf in fucntion defition
+// function someFunction(p1,p2){
+//     console.log(p1,p2);
+// }
+// someFunction("Hi", "There ","How are you ");
 
-function someFunctionUsingRest(p1,...p2){
-    console.log(p1,p2);
-}
-someFunctionUsingRest("Hi", "There ","How are you ");
+// function someFunctionUsingRest(p1,...p2){
+//     console.log(p1,p2);
+// }
+// someFunctionUsingRest("Hi", "There ","How are you ");
+
+// Returning function values
+// unintialized variable return undefined value
+// function addTwoNumbers(x,y){
+//     console.log(x+y);
+// }
+// let result = addTwoNumbers(4,5);
+// console.log(result);
+
+// let addTwoNumbers = (x,y) =>(console.log(x+y));
+// console.log(addTwoNumbers(4,5));
+
+// let addTwoNumbers = (x,y) =>(x+y);
+// console.log(addTwoNumbers(4,5));
+
+// let resultarr = [];
+// for(let i=0;i<10;i++){
+//     let result = addTwoNumbers(i,i*2);
+//     resultarr.push(result);
+// }
+// console.log(resultarr)
