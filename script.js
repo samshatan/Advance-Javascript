@@ -218,14 +218,14 @@
 // }
 // getRecursive(3);
 
-function logRecursive(nr){
-    console.log("Started Function ",nr);
-    if(nr>0){
-        logRecursive(nr-1);
-    }
-    else{
-        console.log("DOne with recursion");
-    }
-    console.log("Ended function",nr);
-}
-logRecursive(3);
+// function logRecursive(nr){
+//     console.log("Started Function ",nr);
+//     if(nr>0){
+//         logRecursive(nr-1);
+//     }
+//     else{
+//         console.log("DOne with recursion");
+//     }
+//     console.log("Ended function",nr);
+// }
+// logRecursive(3);
