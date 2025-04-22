@@ -59,17 +59,99 @@
 // console.log("Hi",p.firstname,p.lastname);
 
 // Methods
-// Functions on a class are called methods. When defining these methods, we don't use the function keyword
+// User Defined Functions on a class are called methods. When defining these methods, we don't use the function keyword
 
-class Person{
+// class Person{
+//     constructor(firstname,lastname){
+//         this.firstname = firstname;
+//         this.lastname = lastname;
+//     }
+//     greet(){
+//         console.log("Hi there! I'm",this.firstname);
+//     }
+// }
+// let p = new Person("Sameer","Maurya");
+// console.log("Hi",p.firstname,p.lastname);
+// p.greet();
+
+// class Person{
+//     constructor(firstname,lastname){
+//         this.firstname = firstname;
+//         this.lastname = lastname;
+//     }
+//     greet(){
+//         console.log("Hi there! I'm",this.firstname);
+//     }
+//     compliment(name,object){
+//         return "That's a wonderful "+object+", "+name;
+//     }
+// }
+// let p = new Person("Sameer Maurya");
+// let compliment = p.compliment("Tanmay","Maurya");
+// console.log(compliment);
+
+// Properties 
+// Properties, Sometimes also called fields, hold the data of the class
+// attributes can only be acces through methods
+
+// class person{
+//     #firstname;
+//     #lastname;
+//     constructor(firstname, lastname){
+//         this.#firstname = firstname;
+//         this.#lastname = lastname;
+//     }
+    
+// }
+// let p = new person("Sammer", "Maurya");
+// console.log(p.firstname);
+
+// class person{
+//     #firstname;
+//     #lastname;
+//     constructor(firstname,lastname){
+//         if(firstname.startsWith("M")){
+//             this.#firstname = firstname;
+//         }
+//         else{
+//             this.#firstname = "M"+firstname;
+//         }
+//         this.#lastname = lastname;
+//     }
+// }
+// let p = new person("Sameer", "Maurya");
+// console.log(p.firstname);
+
+// Getters and setters  these are type of attributes
+
+class person{
+    #firstname;
+    #lastname;
     constructor(firstname,lastname){
-        this.firstname = firstname;
-        this.lastname = lastname;
+        this.#firstname = firstname;
+        this.#lastname = lastname;
     }
-    greet(){
-        console.log("Hi there! I'm",this.firstname);
+    
+    get firstname(){
+        return this.#firstname;
+    }
+    
+    set firstname(firstname){
+        this.#firstname = firstname;
+    }
+
+    get lastname(){
+        return this.#lastname;
+    }
+
+    set lastname(lastname){
+        this.#lastname = lastname;
     }
 }
-let p = new Person("Sameer","Maurya");
-console.log("Hi",p.firstname,p.lastname);
-p.greet();
+let p = new person("Sameer","Maurya");
+console.log(p.firstname);
+console.log(p.lastname);
+p.firstname="Tanmay";
+console.log(p.firstname);
+p.lastname="Maurya";
+console.log(p.lastname);
