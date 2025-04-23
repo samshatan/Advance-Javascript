@@ -124,34 +124,97 @@
 
 // Getters and setters  these are type of attributes
 
+// class person{
+//     #firstname;
+//     #lastname;
+//     constructor(firstname,lastname){
+//         this.#firstname = firstname;
+//         this.#lastname = lastname;
+//     }
+    
+//     get firstname(){
+//         return this.#firstname;
+//     }
+    
+//     set firstname(firstname){
+//         this.#firstname = firstname;
+//     }
+
+//     get lastname(){
+//         return this.#lastname;
+//     }
+
+//     set lastname(lastname){
+//         this.#lastname = lastname;
+//     }
+// }
+// let p = new person("Sameer","Maurya");
+// console.log(p.firstname);
+// console.log(p.lastname);
+// p.firstname="Tanmay";
+// console.log(p.firstname);
+// p.lastname="Maurya";
+// console.log(p.lastname);
+
+// Inheritance
+// It is the concept that classes can have child classes that inherit the properties and methods from the parent class
+// instance variable is object
+// this keyboard to intialize instance variable
+// On object creation constructor is called
+
+// class vehicle{
+//     constructor(color, currentSpeed, maxSpeed){
+//         this.color = color;
+//         this.currentSpeed = currentSpeed;
+//         this.maxSpeed = maxSpeed;
+//     }
+//     move(){
+//         console.log("Moving at", this.currentSpeed);
+//     }
+//     accelerate(amount){
+//         this.currentSpeed += amount;
+//     }
+// }
+
+// class motorcycle extends vehicle{
+//     constructor(color, currentSpeed, maxSpeed, fuel){
+//         super(color, currentSpeed, maxSpeed);
+//         this.fuel = fuel;
+//     }
+//     doWheelie(){
+//         console.log("Driving on one wheel");
+//     }
+// }
+
+// With the extends keyword we specify that a certain class is the child of another class
+
+// let obj = new motorcycle("Red", 0, 180, "gasoline");
+// console.log(obj.color);
+// obj.accelerate(50);
+// obj.move();
+
+// We cannot acces any motorcycle specific properties or methods in our vechiles class
+// This is because not all vechiles are motorcycles
+
+// Prototypes
+// A prototyoes is the mechanism in javascript that makes it possible to have objects.
+// When Nothing is specified when creating a class, the objects inherit from the Object.prototype Prototype;
+
 class person{
-    #firstname;
-    #lastname;
-    constructor(firstname,lastname){
-        this.#firstname = firstname;
-        this.#lastname = lastname;
+    constructor(firstname, lastname){
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
-    
-    get firstname(){
-        return this.#firstname;
-    }
-    
-    set firstname(firstname){
-        this.#firstname = firstname;
-    }
-
-    get lastname(){
-        return this.#lastname;
-    }
-
-    set lastname(lastname){
-        this.#lastname = lastname;
+    greet(){
+        console.log("Hi there");
     }
 }
-let p = new person("Sameer","Maurya");
-console.log(p.firstname);
-console.log(p.lastname);
-p.firstname="Tanmay";
-console.log(p.firstname);
-p.lastname="Maurya";
-console.log(p.lastname);
+person.prototype.intro = function (){
+    console.log("Hi I'm", this.firstname);
+};
+person.prototype.color = "Green";
+
+let obj = new person("Sameer", "Maurya");
+obj.intro();
+obj.greet();
+console.log(obj.color);
