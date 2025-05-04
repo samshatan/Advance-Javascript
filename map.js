@@ -123,6 +123,7 @@
 // let {lastName: name} = person;
 // console.log(name);
 
+//// Sana Will tell from here
 
 //String Destructuring
 // let name="GurukulTheSchools";
